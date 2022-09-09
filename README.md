@@ -8,11 +8,14 @@ Aim with arrow keys and W/S
 Hold space bar to launch, the longer you hold the more powerful the launch
 
 ############### Third Party Assets
+
 Physics Assets Pack from Kenney: https://www.kenney.nl/assets/physics-
 
 ############### Project report
 
-Another Git adventure! The project overall was very fun to make and I enjoyed the exploration of Godot and what the engine can do. It's very cool. Especially setget, even though I did not get to use that this time. Implementing aiming and power was relatively easy and learning the ins and outs of Godot is very rewarding. The struggles came from, once again, Git. The TL;DR is basically that I had to delete my first repo because I was on a branch called master instead of main. Main and master had nothing in common and so I could not issue a pull request and merging the two felt too risky. After quite some time dedicated to research I came to the conclusion that making a new repo would be the simplest path. What I did not realize, however, is that I would lose all my commits. I'm very excited to keep working on this project and to learn more about Godot. 
+Another Git adventure! 
+
+The project overall was very fun to make and I enjoyed the exploration of Godot and what the engine can do. It's very cool. Especially setget, even though I did not get to use that this time. Implementing aiming and power was relatively easy and learning the ins and outs of Godot is very rewarding. The struggles came from, once again, Git. The TL;DR is basically that I had to delete my first repo because I was on a branch called master instead of main. Main and master had nothing in common and so I could not issue a pull request and merging the two felt too risky. After quite some time dedicated to research I came to the conclusion that making a new repo would be the simplest path. What I did not realize, however, is that I would lose all my commits. I'm very excited to keep working on this project and to learn more about Godot. 
 
 
 - [X] D-1: The repository contains a <code>README.md</code> file in its top-level directory.
