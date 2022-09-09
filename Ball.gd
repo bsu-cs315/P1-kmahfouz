@@ -1,5 +1,4 @@
 extends RigidBody2D
-
 export var shotStrength = 0
 var angle = -45
 var minAngle= 0
@@ -26,3 +25,4 @@ func _process(delta):
 	elif Input.is_action_pressed("Angle up") && angle > -90:
 		angle -= 1
 		print(angle)
+
