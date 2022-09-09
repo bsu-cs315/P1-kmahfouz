@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://AimParticles.gd" type="Script" id=1]
+
+[node name="AimParticles" type="CPUParticles2D"]
+scale = Vector2( 3, 2 )
+speed_scale = 0.53
+gravity = Vector2( 0, 200 )
+color = Color( 0.890196, 0.470588, 0.631373, 1 )
+script = ExtResource( 1 )
