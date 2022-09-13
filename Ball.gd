@@ -23,6 +23,7 @@ func _process(delta):
 		var velocity = direction * shotStrength
 		apply_impulse(Vector2.ZERO, velocity)
 		counter += 1
+		$AudioStreamPlayer2D.play()
 	elif Input.is_action_pressed("Angle down") && angle < 0:
 		angle += 1
 		print(angle)
