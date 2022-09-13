@@ -36,8 +36,6 @@ position = Vector2( -1, 2 )
 
 [node name="Ball" parent="." instance=ExtResource( 1 )]
 position = Vector2( 46, 442 )
-contacts_reported = 100
-contact_monitor = true
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
@@ -50,7 +48,5 @@ position = Vector2( 46, 439 )
 
 [node name="Target" parent="." instance=ExtResource( 4 )]
 position = Vector2( 449, 219 )
-contacts_reported = 100
-contact_monitor = true
 
 [connection signal="body_entered" from="Target" to="Target" method="_on_Target_body_entered"]
