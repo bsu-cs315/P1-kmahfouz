@@ -13,7 +13,7 @@ func _ready() -> void:
 # warning-ignore:unused_argument
 
 func _process(delta):
-	var direction = Vector2(1,0).rotated(clamp(deg2rad(angle), deg2rad(maxAngle), deg2rad(minAngle)))
+	var direction = Vector2(1,0).rotated(deg2rad(angle))
 	if counter > 4:
 		shotStrength = 0
 	elif Input.is_action_pressed("Launch"):
@@ -22,12 +22,12 @@ func _process(delta):
 	elif Input.is_action_just_released("Launch"):
 		var velocity = direction * shotStrength
 		apply_impulse(Vector2.ZERO, velocity)
+		shotStrength = 0
 		counter += 1
 		$AudioStreamPlayer2D.play()
-	elif Input.is_action_pressed("Angle down") && angle < 0:
+	elif Input.is_action_pressed("Angle down") and angle < 0:
 		angle += 1
 		print(angle)
 	elif Input.is_action_pressed("Angle up") && angle > -90:
 		angle -= 1
 		print(angle)
-		
