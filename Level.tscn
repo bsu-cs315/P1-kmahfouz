@@ -108,14 +108,14 @@ __meta__ = {
 [node name="TitleScreen" parent="." groups=["game_over_group"] instance=ExtResource( 5 )]
 z_index = 2
 
-[node name="Label" type="Label" parent="."]
+[node name="HUDLabel" type="Label" parent="." groups=["game_over_group"]]
 margin_left = 33.0
 margin_top = 22.0
 margin_right = 129.0
 margin_bottom = 54.0
 script = ExtResource( 8 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Label"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="HUDLabel"]
 "anims/Fade in and out" = SubResource( 3 )
 anims/RESET = SubResource( 4 )
 script = ExtResource( 9 )
