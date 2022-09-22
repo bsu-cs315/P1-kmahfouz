@@ -1,4 +1,4 @@
-extends Button
+extends Label
 
 
 # Declare member variables here. Examples:
@@ -13,6 +13,5 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	if pressed:
-		visible = false
-		get_node("../ColorRect").visible = false
+	text = "Angle: " + str($"../Ball".angle) + "\n" + "Shot strength: " + str($"../Ball".shot_strength)
+	

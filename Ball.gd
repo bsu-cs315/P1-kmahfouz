@@ -1,33 +1,30 @@
 extends RigidBody2D
-export var shotStrength = 0
+export var shot_strength = 0
 var angle = -45
-var minAngle= 0
-var maxAngle= -90
+var min_angle= 0
+var max_angle= -90
 var counter = 0
-# Called when the node enters the scene tree for the first time.
 
-func _ready() -> void:
-	pass # Replace with function body.
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-# warning-ignore:unused_argument
+signal game_over_started
 
-func _process(delta):
+func _process(_delta):
 	var direction = Vector2(1,0).rotated(deg2rad(angle))
+	var velocity = direction * shot_strength
 	if counter > 4:
-		shotStrength = 0
+		shot_strength = 0
+		emit_signal("game_over_started")
 	elif Input.is_action_pressed("Launch"):
-		shotStrength += 50
-		print(shotStrength)
+		shot_strength += 50
+		print(shot_strength)
 	elif Input.is_action_just_released("Launch"):
-		var velocity = direction * shotStrength
 		apply_impulse(Vector2.ZERO, velocity)
-		shotStrength = 0
+		shot_strength = 0
 		counter += 1
 		$AudioStreamPlayer2D.play()
-	elif Input.is_action_pressed("Angle down") and angle < 0:
+	elif Input.is_action_pressed("Angle down") and angle < min_angle:
 		angle += 1
 		print(angle)
-	elif Input.is_action_pressed("Angle up") && angle > -90:
+	elif Input.is_action_pressed("Angle up") && angle > max_angle:
 		angle -= 1
 		print(angle)
+

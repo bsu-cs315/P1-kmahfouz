@@ -14,5 +14,5 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if pressed:
-		visible = false
-		get_node("../ColorRect").visible = false
+# warning-ignore:return_value_discarded
+		get_tree().reload_current_scene()
